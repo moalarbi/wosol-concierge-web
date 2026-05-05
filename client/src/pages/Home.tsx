@@ -1,25 +1,31 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Experiences from "@/components/Experiences";
+import Partners from "@/components/Partners";
+import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Wosol Concierge - Luxury Concierge Service Website
+ * Design: Dark luxury aesthetic inspired by Royist.com
+ * Colors: Dark background (#0f0f0f) with lime green accents (#00ff00)
+ * Language: Arabic (RTL)
  */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <Header />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero />
+        <About />
+        <Services />
+        <Experiences />
+        <Partners />
+        <Newsletter />
       </main>
+      <Footer />
     </div>
   );
 }
